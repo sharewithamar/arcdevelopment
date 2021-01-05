@@ -312,7 +312,13 @@ function Header(props) {
           label="Contact Us"
         /> */}
 
-      <Button variant="contained" color="secondary" className={classes.button}>
+      <Button
+        variant="contained"
+        component={Link}
+        to="/estimate"
+        color="secondary"
+        className={classes.button}
+      >
         Free Estimate
       </Button>
 
