@@ -68,11 +68,17 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '25px',
   },
   button: {
+    ...theme.typography.estimate,
     borderRadius: '50px',
     marginLeft: '50px',
     marginRight: '25px',
     height: '45px',
-    ...theme.typography.estimate,
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.light,
+    },
+    '&:active': {
+      backgroundColor: theme.palette.secondary.light,
+    },
   },
   menu: {
     backgroundColor: theme.palette.common.blue,
@@ -133,6 +139,7 @@ function Header(props) {
   //const location = useLocation();
 
   const handleChange = (e, newValue) => {
+    console.log('newValue', newValue);
     setValue(newValue);
   };
 
@@ -201,6 +208,7 @@ function Header(props) {
             }
           }
           break;
+
         default:
           break;
       }
@@ -311,7 +319,6 @@ function Header(props) {
           to="/contact"
           label="Contact Us"
         /> */}
-
       <Button
         variant="contained"
         component={Link}
@@ -321,7 +328,6 @@ function Header(props) {
       >
         Free Estimate
       </Button>
-
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
@@ -489,7 +495,7 @@ function Header(props) {
           <ListItem
             onClick={() => {
               setOpenDrawer(false);
-              setValue(5);
+              //setValue(5);
             }}
             divider
             button
