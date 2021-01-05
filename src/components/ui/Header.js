@@ -325,6 +325,7 @@ function Header(props) {
         to="/estimate"
         color="secondary"
         className={classes.button}
+        onClick={() => setValue(false)}
       >
         Free Estimate
       </Button>
@@ -495,7 +496,7 @@ function Header(props) {
           <ListItem
             onClick={() => {
               setOpenDrawer(false);
-              //setValue(5);
+              setValue(false);
             }}
             divider
             button
