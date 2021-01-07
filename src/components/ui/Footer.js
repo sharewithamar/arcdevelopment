@@ -114,7 +114,7 @@ export default function Footer(props) {
                   props.setselectedIndex(2);
                 }}
               >
-                Mobile App Devlopment
+                iOS/Android App Devlopment
               </Grid>
               <Grid
                 item

@@ -209,6 +209,10 @@ function Header(props) {
           }
           break;
 
+        case '/estimate':
+          props.setValue(false);
+          break;
+
         default:
           break;
       }
